@@ -23,13 +23,13 @@ app.use(cors({
 app.use("/api/categories", categoryRoutes);
 app.use("/api/animals", animalRoutes);
 
+app.get("/", (req, res) => {
+  res.send("<h1>Welcome to Animal World</h1>");
+});
+
 // Error handling middleware
 app.use((err, req, res, next) => {
   res.status(err.status || 500).json({ error: err.message || "Server Error" });
-});
-
-app.get("/", (req, res) => {
-  res.send("<h1>Welcome to Animal World</h1>");
 });
 
 // Server listen
