@@ -1,0 +1,27 @@
+{
+  "name": "animal-app-server",
+  "version": "1.0.0",
+  "description": "Animal App Server",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node index.js",
+    "server": "nodemon index.js",
+    "client": "npm start --prefix ../frontend",
+    "build": "concurrently \"npm run client\" \"npm run server\""
+  },
+  "keywords": [],
+  "author": "GilaniRabbu",
+  "license": "ISC",
+  "dependencies": {
+    "concurrently": "^9.1.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.21.1",
+    "express-validator": "^7.2.0",
+    "mongoose": "^8.8.3",
+    "morgan": "^1.10.0",
+    "multer": "^1.4.5-lts.1",
+    "nodemon": "^3.1.7"
+  }
+}
